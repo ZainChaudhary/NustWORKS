@@ -127,4 +127,127 @@
   <data name="_lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="accepted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accepted.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="accepted_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accepted_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="addd2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addd2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="addd2_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addd2_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gray.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gray_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gray_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_Delete.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Delete_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_Delete_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laptop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laptop.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laptop_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laptop_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="log" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="log_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="micon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\micon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mouseicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mouseicon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="myproject" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\myproject.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="myproject_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\myproject_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="myself" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\myself.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="myself_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\myself_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="out_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\out_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shut.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shut_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shut_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user1.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user1_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user1_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user2_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user2_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userico_png_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userico.png_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userico_png_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userico.png_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userico_png_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userico.png_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usermale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usermale.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usermale_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usermale_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userpic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userpic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\out.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -14,6 +14,8 @@ namespace NustWORKS
         const string Password = "zdsalpha";
         const string Dataset = "nustworks";
 
+        public static UserInfo CurrentUser { get; private set; }
+
         public static MySqlConnection Connection { get; private set; }
 
         public static void Connect()
@@ -57,14 +59,5 @@ namespace NustWORKS
             return user;
         }
 
-    }
-
-    public class UserInfo
-    {
-        public string cms;
-        public string fn;
-        public string ln;
-        public string email;
-        public string pn;
     }
 }

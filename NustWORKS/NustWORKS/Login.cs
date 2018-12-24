@@ -378,6 +378,10 @@ namespace NustWORKS
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             UserInfo user = Server.Login(login_cms.Text, login_pass.Text);
+            this.Hide();
+            using (Dashboard dashboard = new Dashboard())
+                dashboard.ShowDialog();
+            this.Show();
         }
     }
 }

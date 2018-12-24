@@ -58,7 +58,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tab_View_Profile1 = new Dashboard.tab_View_Profile();
+            this.tab_View_Profile1 = new NustWORKS.tab_View_Profile();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -337,7 +337,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::Dashboard.Properties.Resources.usermale_64;
+            this.pictureBox8.Image = global::NustWORKS.Properties.Resources.usermale_64;
             resources.ApplyResources(this.pictureBox8, "pictureBox8");
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
