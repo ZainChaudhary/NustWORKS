@@ -1,6 +1,6 @@
 ﻿namespace Dashboard
 {
-    partial class tab_View_Profile
+    public partial class tab_View_Profile
     {
         /// <summary> 
         /// Required designer variable.
