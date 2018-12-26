@@ -23,9 +23,36 @@ namespace NustWORKS
 
             }
         }
+        public UserInfo User { get; private set; }
         public tab_Edit_Profile()
         {
+            User = Server.CurrentUser;
             InitializeComponent();
+            fn.Text = User.fn;
+            ln.Text = User.ln;
+            cms.Text = User.cms;
+            mail.Text = User.email;
+            phone.Text = User.pn;
+        }
+
+        private void tab_Edit_Profile_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Server.UpdateUser(cms.Text, fn.Text, ln.Text, phone.Text, mail.Text))
+                    MessageBox.Show("Profile Updated!");
+                else
+                    MessageBox.Show("Unable to update profile!");
+            }
+            catch
+            {
+                MessageBox.Show("A user with same CMS or email already exists. Please enter valid input.");
+            }
         }
     }
 }

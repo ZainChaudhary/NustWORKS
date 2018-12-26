@@ -8,10 +8,10 @@ namespace NustWORKS
 {
     public class UserInfo
     {
-        public string cms;
-        public string fn;
-        public string ln;
-        public string email;
-        public string pn;
+        public string CMS;
+        public string FirstName;
+        public string LastName;
+        public string Email;
+        public string PhoneNo;
     }
 }

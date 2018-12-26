@@ -20,12 +20,13 @@ namespace NustWORKS
                 if (_instance == null)
                     _instance = new tab_View_Profile();
                 return _instance;
-
             }
         }
+        public readonly UserInfo User = Server.CurrentUser;
         public tab_View_Profile()
         {
             InitializeComponent();
+            bunifuThinButton22_Click(null, null);
         }
 
         private void lblTitle_Click(object sender, EventArgs e)
@@ -73,6 +74,20 @@ namespace NustWORKS
             }
             else
                 tab_Edit_Profile.Instance.BringToFront();
+        }
+
+        private void tab_View_Profile_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            fn.Text = User.fn;
+            ln.Text = User.ln;
+            mail.Text = User.email;
+            phone.Text = User.pn;
+            cms.Text = User.cms;
         }
     }
 }

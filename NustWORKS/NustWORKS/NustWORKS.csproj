@@ -55,33 +55,50 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkingProjects.cs" />
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectInfo.cs" />
     <Compile Include="tab_Add_Project.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Include="tab_Add_Project.resx">
+      <DependentUpon>tab_Add_Project.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="tab_Add_Project.Designer.cs">
       <DependentUpon>tab_Add_Project.cs</DependentUpon>
     </Compile>
     <Compile Include="tab_Edit_Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Include="tab_Edit_Profile.resx">
+      <DependentUpon>tab_Edit_Profile.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="tab_Edit_Profile.Designer.cs">
       <DependentUpon>tab_Edit_Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="tab_MY_Projects.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Include="tab_MY_Projects.resx">
+      <DependentUpon>tab_MY_Projects.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="tab_MY_Projects.Designer.cs">
       <DependentUpon>tab_MY_Projects.cs</DependentUpon>
     </Compile>
     <Compile Include="tab_View_Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Include="tab_View_Profile.resx">
+      <DependentUpon>tab_View_Profile.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="tab_View_Profile.Designer.cs">
       <DependentUpon>tab_View_Profile.cs</DependentUpon>
     </Compile>
@@ -93,6 +110,9 @@
     <Compile Include="projectbox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Include="projectbox.resx">
+      <DependentUpon>projectbox.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="projectbox.Designer.cs">
       <DependentUpon>projectbox.cs</DependentUpon>
     </Compile>
