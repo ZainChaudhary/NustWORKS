@@ -28,11 +28,11 @@ namespace NustWORKS
         {
             User = Server.CurrentUser;
             InitializeComponent();
-            fn.Text = User.fn;
-            ln.Text = User.ln;
-            cms.Text = User.cms;
-            mail.Text = User.email;
-            phone.Text = User.pn;
+            fn.Text = User.FirstName;
+            ln.Text = User.LastName;
+            cms.Text = User.CMS;
+            mail.Text = User.Email;
+            phone.Text = User.PhoneNo;
         }
 
         private void tab_Edit_Profile_Load(object sender, EventArgs e)

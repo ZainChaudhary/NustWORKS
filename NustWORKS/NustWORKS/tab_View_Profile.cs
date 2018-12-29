@@ -83,11 +83,11 @@ namespace NustWORKS
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-            fn.Text = User.fn;
-            ln.Text = User.ln;
-            mail.Text = User.email;
-            phone.Text = User.pn;
-            cms.Text = User.cms;
+            fn.Text = User.FirstName;
+            ln.Text = User.LastName;
+            mail.Text = User.Email;
+            phone.Text = User.PhoneNo;
+            cms.Text = User.CMS;
         }
     }
 }

@@ -245,7 +245,7 @@ namespace NustWORKS
 
         public static ProjectInfo[] GetAvailableProjects()
         {
-            object[][] rows = GetRows(Command("SELECT * FROM project WHERE NOT EXIST (SELECT * FROM workingprojects WHERE project.projectid = workingprojects.projectid) AND NOT EXIST (SELECT * FROM paidprojects WHERE project.projectid = paidprojects.projectid)"), "projectid", "projectname", "clientid", "budget", "pduration", "pdetails");
+            object[][] rows = GetRows(Command("SELECT * FROM project WHERE NOT EXIST (SELECT * FROM workingprojects WHERE project.projectid = workingprojects.projectid)"), "projectid", "projectname", "clientid", "budget", "pduration", "pdetails");
             return rows.Select((row) =>
             {
                 ProjectInfo proj = new ProjectInfo();
@@ -259,9 +259,6 @@ namespace NustWORKS
             }).ToArray();
         }
 
-        public static ProjectInfo[] GetWorkingProjects()
-        {
 
-        }
     }
 }
