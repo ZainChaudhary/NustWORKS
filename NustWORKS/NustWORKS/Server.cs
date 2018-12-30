@@ -131,6 +131,7 @@ namespace NustWORKS
             user.LastName = (string)row[2];
             user.PhoneNo = (string)row[3];
             user.Email = (string)row[4];
+            CurrentUser = user;
             return user;
         }
 
@@ -259,6 +260,61 @@ namespace NustWORKS
             }).ToArray();
         }
 
+        public static ProjectInfo[] GetMyProjects()
+        {
+            var command = Command("SELECT * FROM project WHERE clientid=@cms");
+            command.Parameters.AddWithValue("@cms", CurrentUser.CMS);
+            object[][] rows = GetRows(command, "projectid", "projectname", "clientid", "budget", "pduration", "pdetails");
+            return rows.Select((row) =>
+            {
+                ProjectInfo proj = new ProjectInfo();
+                proj.ProjectId = (int)row[0];
+                proj.Name = (string)row[1];
+                proj.Client = (int)row[2];
+                proj.Budget = (int)row[3];
+                proj.Duration = (string)row[4];
+                proj.Details = (string)row[5];
+                return proj;
+            }).ToArray();
+        }
 
+        public static ProjectInfo[] GetWorkingProjects()
+        {
+            var command = Command("SELECT * FROM project,workingprojects WHERE project.projectid=workingprojects.projectid AND workingprojects.freelancerid = @cms");
+            command.Parameters.AddWithValue("@cms", CurrentUser.CMS);
+            object[][] rows = GetRows(command, "project.projectid", "project.projectname", "project.clientid", "project.budget", "project.pduration", "project.pdetails");
+            return rows.Select((row) =>
+            {
+                ProjectInfo proj = new ProjectInfo();
+                proj.ProjectId = (int)row[0];
+                proj.Name = (string)row[1];
+                proj.Client = (int)row[2];
+                proj.Budget = (int)row[3];
+                proj.Duration = (string)row[4];
+                proj.Details = (string)row[5];
+                return proj;
+            }).ToArray();
+        }
+
+        public static void AcceptProject(int projectId, int client, string workingStatus, string payStatus)
+        {
+            var command = Command("INSERT INTO workingprojects VALUES (@pid,@client,@freelancer,@wstatus,@pstatus)");
+            command.Parameters.AddWithValue("@pid", projectId);
+            command.Parameters.AddWithValue("@client", client);
+            command.Parameters.AddWithValue("@freelancer", CurrentUser.CMS);
+            command.Parameters.AddWithValue("@wstatus", workingStatus);
+            command.Parameters.AddWithValue("@pstatus", payStatus);
+            Execute(command);
+        }
+        
+        public static void FinishProject(int projectid)
+        {
+            var command1 = Command("DELETE FROM project WHERE projectid=@id");
+            var command2 = Command("DELETE FROM workingprojects projectid=@id");
+            command1.Parameters.AddWithValue("@id", projectid);
+            command2.Parameters.AddWithValue("@id", projectid);
+            Execute(command1);
+            Execute(command2);
+        }
     }
 }
