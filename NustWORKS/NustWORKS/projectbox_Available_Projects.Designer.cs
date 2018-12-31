@@ -32,10 +32,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblBudget = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.lblBudget = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -85,36 +85,13 @@
             this.panel1.Size = new System.Drawing.Size(159, 200);
             this.panel1.TabIndex = 32;
             // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoEllipsis = true;
-            this.lblPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPrice.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(202)))), ((int)(((byte)(254)))));
-            this.lblPrice.Location = new System.Drawing.Point(805, 13);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(95, 37);
-            this.lblPrice.TabIndex = 31;
-            this.lblPrice.Text = "price";
-            // 
-            // lblBudget
-            // 
-            this.lblBudget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblBudget.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBudget.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(202)))), ((int)(((byte)(254)))));
-            this.lblBudget.Location = new System.Drawing.Point(715, 13);
-            this.lblBudget.Name = "lblBudget";
-            this.lblBudget.Size = new System.Drawing.Size(101, 37);
-            this.lblBudget.TabIndex = 30;
-            this.lblBudget.Text = "Budget :  ";
-            // 
             // lblMessage
             // 
             this.lblMessage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblMessage.Location = new System.Drawing.Point(162, 50);
+            this.lblMessage.Location = new System.Drawing.Point(192, 50);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(738, 93);
+            this.lblMessage.Size = new System.Drawing.Size(708, 93);
             this.lblMessage.TabIndex = 29;
             this.lblMessage.Text = "Description";
             // 
@@ -124,11 +101,34 @@
             this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(239)))));
-            this.lblTitle.Location = new System.Drawing.Point(157, 13);
+            this.lblTitle.Location = new System.Drawing.Point(191, 8);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(552, 37);
+            this.lblTitle.Size = new System.Drawing.Size(530, 37);
             this.lblTitle.TabIndex = 28;
             this.lblTitle.Text = "Title";
+            // 
+            // lblBudget
+            // 
+            this.lblBudget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblBudget.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBudget.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(202)))), ((int)(((byte)(254)))));
+            this.lblBudget.Location = new System.Drawing.Point(708, 13);
+            this.lblBudget.Name = "lblBudget";
+            this.lblBudget.Size = new System.Drawing.Size(101, 37);
+            this.lblBudget.TabIndex = 30;
+            this.lblBudget.Text = "Budget :  ";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoEllipsis = true;
+            this.lblPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPrice.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(202)))), ((int)(((byte)(254)))));
+            this.lblPrice.Location = new System.Drawing.Point(798, 13);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(95, 37);
+            this.lblPrice.TabIndex = 31;
+            this.lblPrice.Text = "price";
             // 
             // projectbox_Available_Projects
             // 
@@ -154,9 +154,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label lblBudget;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblBudget;
+        private System.Windows.Forms.Label lblPrice;
     }
 }
