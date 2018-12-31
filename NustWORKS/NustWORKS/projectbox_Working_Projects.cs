@@ -12,8 +12,17 @@ namespace NustWORKS
 {
     public partial class projectbox_Working_Projects : UserControl
     {
-        public projectbox_Working_Projects()
+        public readonly ProjectInfo Project;
+        public projectbox_Working_Projects(ProjectInfo project)
         {
+            Project = project;
+            lblTitle.Text = project.Name;
+            int budget = project.Budget;
+            lblPrice.Text = budget.ToString("B");
+            lblMessage.Text = project.Details;
+
+            int projid = project.ProjectId;
+
             InitializeComponent();
         }
 
@@ -23,6 +32,16 @@ namespace NustWORKS
         }
 
         private void lblMessage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void projectbox_Working_Projects_Load(object sender, EventArgs e)
         {
 
         }

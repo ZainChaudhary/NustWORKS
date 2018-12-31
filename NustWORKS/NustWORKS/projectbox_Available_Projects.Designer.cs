@@ -74,6 +74,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(180, 47);
             this.bunifuThinButton21.TabIndex = 33;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // panel1
             // 
@@ -143,6 +144,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "projectbox_Available_Projects";
             this.Size = new System.Drawing.Size(926, 200);
+            this.Load += new System.EventHandler(this.projectbox_Available_Projects_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

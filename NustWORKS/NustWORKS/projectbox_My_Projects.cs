@@ -12,14 +12,23 @@ namespace NustWORKS
 {
     public partial class projectbox_My_Projects : UserControl
     {
-        public projectbox_My_Projects()
+        public readonly ProjectInfo Project;
+        public projectbox_My_Projects(ProjectInfo project)
         {
+            Project = project;
+            lblTitle.Text = project.Name;
+            int budget = project.Budget;
+            lblPrice.Text = budget.ToString("B");
+            lblMessage.Text = project.Details;
+
+            int projid= project.ProjectId;
+
             InitializeComponent();
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
