@@ -22,6 +22,7 @@ namespace NustWORKS
             lblMessage.Text = project.Details;
 
             int projid = project.ProjectId;
+
             InitializeComponent();
         }
 
