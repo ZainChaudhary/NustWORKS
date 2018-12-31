@@ -16,5 +16,15 @@ namespace NustWORKS
         {
             InitializeComponent();
         }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMessage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

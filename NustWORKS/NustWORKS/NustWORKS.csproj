@@ -65,10 +65,37 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="projectbox_Available_Projects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="projectbox_Available_Projects.Designer.cs">
+      <DependentUpon>projectbox_Available_Projects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectbox_My_Projects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="projectbox_My_Projects.Designer.cs">
+      <DependentUpon>projectbox_My_Projects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectbox_Working_Projects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="projectbox_Working_Projects.Designer.cs">
+      <DependentUpon>projectbox_Working_Projects.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProjectInfo.cs" />
     <Compile Include="tab_Add_Project.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Include="projectbox_Available_Projects.resx">
+      <DependentUpon>projectbox_Available_Projects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectbox_My_Projects.resx">
+      <DependentUpon>projectbox_My_Projects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectbox_Working_Projects.resx">
+      <DependentUpon>projectbox_Working_Projects.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="tab_Add_Project.resx">
       <DependentUpon>tab_Add_Project.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,9 +120,27 @@
     <Compile Include="tab_MY_Projects.Designer.cs">
       <DependentUpon>tab_MY_Projects.cs</DependentUpon>
     </Compile>
+    <Compile Include="tab_Project_Description.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tab_Project_Description.Designer.cs">
+      <DependentUpon>tab_Project_Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tab_View_Others_Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tab_View_Others_Profile.Designer.cs">
+      <DependentUpon>tab_View_Others_Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="tab_View_Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Include="tab_Project_Description.resx">
+      <DependentUpon>tab_Project_Description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tab_View_Others_Profile.resx">
+      <DependentUpon>tab_View_Others_Profile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="tab_View_Profile.resx">
       <DependentUpon>tab_View_Profile.cs</DependentUpon>
     </EmbeddedResource>
