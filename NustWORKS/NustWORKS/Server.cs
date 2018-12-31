@@ -11,8 +11,9 @@ namespace NustWORKS
     {
         static Random random = new Random();
         const string Host = "localhost";
+        const string Port = "3307";
         const string Username = "root";
-        const string Password = "zdsalpha";
+        const string Password = "71722550";
         const string Dataset = "nustworks";
 
         public static UserInfo CurrentUser { get; private set; }
@@ -21,7 +22,7 @@ namespace NustWORKS
 
         public static void Connect()
         {
-            string connectionString = "server=" + Host + ";uid=" + Username + ";pwd=" + Password + ";database=" + Dataset;
+            string connectionString = "server=" + Host + ";port=" + Port + ";uid=" + Username + ";pwd=" + Password + ";database=" + Dataset;
             Connection = new MySqlConnection(connectionString);
             Connection.Open();
         }
@@ -182,10 +183,10 @@ namespace NustWORKS
             return tag_id;
         }
 
-        public static int AddProject(int client ,string name, int budget, string duration, string desc)
+        public static int AddProject(string client, string name, int budget, string duration, string desc)
         {
             int project_id = random.Next(int.MaxValue);
-            var command = Command("INSERT INTO projects VALUES (@id,@client,@name,@budget,@duration,@desc)");
+            var command = Command("INSERT INTO project VALUES (@id,@client,@name,@budget,@duration,@desc)");
             command.Parameters.AddWithValue("@id", project_id);
             command.Parameters.AddWithValue("@client", client);
             command.Parameters.AddWithValue("@name", name);
@@ -205,7 +206,7 @@ namespace NustWORKS
             Execute(command);
         }
 
-        public static int AddProject(int client, string name, int budget, string duration, string desc, string[] tags)
+        public static int AddProject(string client, string name, int budget, string duration, string desc, string[] tags)
         {
             int proj_id = AddProject(client, name, budget, duration, desc);
             foreach (string tag in tags)

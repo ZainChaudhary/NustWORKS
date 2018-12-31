@@ -110,6 +110,19 @@ namespace NustWORKS
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Server.AddProject(Server.CurrentUser.CMS, title.Text, int.Parse(budget.Text), duration.Text, desc.Text,tags.Text.Split(','));
+                MessageBox.Show("Project added!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to create project!");
+            }
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
