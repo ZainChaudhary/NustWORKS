@@ -40,6 +40,7 @@ namespace NustWORKS
             for (int i = 0; i < fields.Length; i++)
                 row[i] = reader[fields[i]];
             reader.Close();
+            command.Dispose();
             return row;
         }
 
@@ -55,12 +56,14 @@ namespace NustWORKS
                 rows.Add(row);
             }
             reader.Close();
+            command.Dispose();
             return rows.ToArray();
         }
 
         public static int Count(MySqlCommand command)
         {
             int count = (int)command.ExecuteScalar();
+            command.Dispose();
             return count;
         }
 
@@ -70,12 +73,15 @@ namespace NustWORKS
             MySqlDataReader reader = command.ExecuteReader();
             bool output = reader.Read();
             reader.Close();
+            command.Dispose();
             return output;
         }
 
         public static int Execute(MySqlCommand command)
         {
-            return command.ExecuteNonQuery();
+            int output = command.ExecuteNonQuery();
+            command.Dispose();
+            return output;
         }
 
         public static UserInfo[] GetAllUsers()
@@ -180,13 +186,14 @@ namespace NustWORKS
             var command = Command("INSERT INTO tags VALUES (@tagid,@tagname)");
             command.Parameters.AddWithValue("@tagid", tag_id);
             command.Parameters.AddWithValue("@tagname", tag);
+            Execute(command);
             return tag_id;
         }
 
         public static int AddProject(string client, string name, int budget, string duration, string desc)
         {
             int project_id = random.Next(int.MaxValue);
-            var command = Command("INSERT INTO project VALUES (@id,@client,@name,@budget,@duration,@desc)");
+            var command = Command("INSERT INTO project VALUES (@id,@name,@client,@budget,@duration,@desc)");
             command.Parameters.AddWithValue("@id", project_id);
             command.Parameters.AddWithValue("@client", client);
             command.Parameters.AddWithValue("@name", name);
@@ -209,8 +216,8 @@ namespace NustWORKS
         public static int AddProject(string client, string name, int budget, string duration, string desc, string[] tags)
         {
             int proj_id = AddProject(client, name, budget, duration, desc);
-            foreach (string tag in tags)
-                AddTagToProject(proj_id, tag);
+            //foreach (string tag in tags)
+            //    AddTagToProject(proj_id, tag);
             return proj_id;
         }
 
@@ -220,10 +227,10 @@ namespace NustWORKS
             return rows.Select((row) =>
             {
                 ProjectInfo proj = new ProjectInfo();
-                proj.ProjectId = (int)row[0];
+                proj.ProjectId = int.Parse((string)row[0]);
                 proj.Name = (string)row[1];
-                proj.Client = (int)row[2];
-                proj.Budget = (int)row[3];
+                proj.Client = (string)row[2];
+                proj.Budget = int.Parse((string)row[3]);
                 proj.Duration = (string)row[4];
                 proj.Details = (string)row[5];
                 return proj;
@@ -236,10 +243,10 @@ namespace NustWORKS
             command.Parameters.AddWithValue("@id", id);
             object[] row = GetRow(command, "projectid", "projectname", "clientid", "budget", "pduration", "pdetails");
             ProjectInfo proj = new ProjectInfo();
-            proj.ProjectId = (int)row[0];
+            proj.ProjectId = int.Parse((string)row[0]);
             proj.Name = (string)row[1];
-            proj.Client = (int)row[2];
-            proj.Budget = (int)row[3];
+            proj.Client = (string)row[2];
+            proj.Budget = int.Parse((string)row[3]);
             proj.Duration = (string)row[4];
             proj.Details = (string)row[5];
             return proj;
@@ -251,10 +258,10 @@ namespace NustWORKS
             return rows.Select((row) =>
             {
                 ProjectInfo proj = new ProjectInfo();
-                proj.ProjectId = (int)row[0];
+                proj.ProjectId = int.Parse((string)row[0]);
                 proj.Name = (string)row[1];
-                proj.Client = (int)row[2];
-                proj.Budget = (int)row[3];
+                proj.Client = (string)row[2];
+                proj.Budget = int.Parse((string)row[3]);
                 proj.Duration = (string)row[4];
                 proj.Details = (string)row[5];
                 return proj;
@@ -269,10 +276,10 @@ namespace NustWORKS
             return rows.Select((row) =>
             {
                 ProjectInfo proj = new ProjectInfo();
-                proj.ProjectId = (int)row[0];
+                proj.ProjectId = int.Parse((string)row[0]);
                 proj.Name = (string)row[1];
-                proj.Client = (int)row[2];
-                proj.Budget = (int)row[3];
+                proj.Client = (string)row[2];
+                proj.Budget = int.Parse((string)row[3]);
                 proj.Duration = (string)row[4];
                 proj.Details = (string)row[5];
                 return proj;
@@ -287,10 +294,10 @@ namespace NustWORKS
             return rows.Select((row) =>
             {
                 ProjectInfo proj = new ProjectInfo();
-                proj.ProjectId = (int)row[0];
+                proj.ProjectId = int.Parse((string)row[0]);
                 proj.Name = (string)row[1];
-                proj.Client = (int)row[2];
-                proj.Budget = (int)row[3];
+                proj.Client = (string)row[2];
+                proj.Budget = int.Parse((string)row[3]);
                 proj.Duration = (string)row[4];
                 proj.Details = (string)row[5];
                 return proj;

@@ -37,28 +37,9 @@ namespace NustWORKS
 
         private void populateItems()
         {
-            //populating it here
-            projectbox[] projectboxes = new projectbox[20];
-            //looping through each item
-            for (int i = 0; i < projectboxes.Length; i++)
-            {
-                projectboxes[i] = new projectbox();
-                projectboxes[i].Width = flowLayoutPanel1.Width;
-                projectboxes[i].Icon = Resources.user2_64;
-                projectboxes[i].IconBackground = Color.White;
-                projectboxes[i].Title = "Get some Title";
-                projectboxes[i].Message = "Get the Description of the Project";
-                projectboxes[i].Price = "RS XX/-";
-
-                //add the flow layout
-                if (flowLayoutPanel1.Controls.Count < 0)
-                {
-                    flowLayoutPanel1.Controls.Clear();
-                }
-                else
-                    flowLayoutPanel1.Controls.Add(projectboxes[i]);
-
-            }
+            var projects = Server.GetMyProjects();
+            foreach (var proj in projects)
+                flowLayoutPanel1.Controls.Add(new projectbox_My_Projects(proj));
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
