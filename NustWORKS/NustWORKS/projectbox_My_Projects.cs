@@ -15,15 +15,14 @@ namespace NustWORKS
         public readonly ProjectInfo Project;
         public projectbox_My_Projects(ProjectInfo project)
         {
+            InitializeComponent();
             Project = project;
             lblTitle.Text = project.Name;
             int budget = project.Budget;
-            lblPrice.Text = budget.ToString("B");
+            lblPrice.Text = budget.ToString();
             lblMessage.Text = project.Details;
 
-            int projid= project.ProjectId;
-
-            InitializeComponent();
+            int projid = project.ProjectId;
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
