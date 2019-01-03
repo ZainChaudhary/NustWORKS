@@ -32,23 +32,6 @@ namespace NustWORKS
         {
 
         }
-        /// <summary>
-        /// Event of TextBox
-        /// </summary>
-        void Enter1(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "Search Project")
-            {
-                textBox1.Text = string.Empty;
-            }
-        }
-        void Leave1(object sender, EventArgs e)
-        {
-            if (textBox1.Text == string.Empty)
-            {
-                textBox1.Text = "Search Project";
-            }
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -88,14 +71,10 @@ namespace NustWORKS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (!panel7.Controls.Contains(tab_MY_Projects.Instance))
-            {
-                panel7.Controls.Add(tab_MY_Projects.Instance);
-                tab_MY_Projects.Instance.Dock = DockStyle.Fill;
-                tab_MY_Projects.Instance.BringToFront();
-            }
-            else
-                tab_MY_Projects.Instance.BringToFront();
+            var Instance = new tab_MY_Projects("My");
+            panel7.Controls.Add(Instance);
+            Instance.Dock = DockStyle.Fill;
+            Instance.BringToFront();
 
         }
 
@@ -118,14 +97,10 @@ namespace NustWORKS
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (!panel7.Controls.Contains(tab_MY_Projects.Instance))
-            {
-                panel7.Controls.Add(tab_MY_Projects.Instance);
-                tab_MY_Projects.Instance.Dock = DockStyle.Fill;
-                tab_MY_Projects.Instance.BringToFront();
-            }
-            else
-                tab_MY_Projects.Instance.BringToFront();
+            var Instance = new tab_MY_Projects("My");
+            panel7.Controls.Add(Instance);
+            Instance.Dock = DockStyle.Fill;
+            Instance.BringToFront();
         }
 
         private void button5_Click(object sender, EventArgs e)

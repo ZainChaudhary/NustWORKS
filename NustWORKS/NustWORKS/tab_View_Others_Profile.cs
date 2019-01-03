@@ -16,24 +16,12 @@ namespace NustWORKS
         public tab_View_Others_Profile(UserInfo user)
         {
             User = user;
+            InitializeComponent();
             cms.Text = user.CMS;
             mail.Text = user.Email;
             phone.Text = user.PhoneNo;
             fn.Text = user.FirstName;
             ln.Text = user.LastName;
-
-
-            InitializeComponent();
-        }
-
-        private void cms_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

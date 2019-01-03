@@ -13,18 +13,8 @@ namespace NustWORKS
 {
     public partial class tab_MY_Projects : UserControl
     {
-        public static tab_MY_Projects _instance;
-        public static tab_MY_Projects Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new tab_MY_Projects();
-                return _instance;
-
-            }
-        }
-        public tab_MY_Projects()
+        public readonly string Type;
+        public tab_MY_Projects(string type)
         {
             InitializeComponent();
 
