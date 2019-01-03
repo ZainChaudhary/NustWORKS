@@ -10,7 +10,7 @@ namespace NustWORKS
     {
         public int ProjectId;
         public string Name;
-        public string Client;
+        public int Client;
         public int Budget;
         public string Duration;
         public string Details;
