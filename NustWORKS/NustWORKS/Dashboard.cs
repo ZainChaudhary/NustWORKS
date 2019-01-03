@@ -32,6 +32,23 @@ namespace NustWORKS
         {
 
         }
+        /// <summary>
+        /// Event of TextBox
+        /// </summary>
+        void Enter1(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Search Project")
+            {
+                textBox1.Text = string.Empty;
+            }
+        }
+        void Leave1(object sender, EventArgs e)
+        {
+            if (textBox1.Text == string.Empty)
+            {
+                textBox1.Text = "Search Project";
+            }
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -71,10 +88,7 @@ namespace NustWORKS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var Instance = new tab_MY_Projects("My");
-            panel7.Controls.Add(Instance);
-            Instance.Dock = DockStyle.Fill;
-            Instance.BringToFront();
+            ShowTab(new tab_MY_Projects(this, tab_MY_Projects.ProjectType.My));
 
         }
 
@@ -85,39 +99,34 @@ namespace NustWORKS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!panel7.Controls.Contains(tab_View_Profile.Instance))
-            {
-                panel7.Controls.Add(tab_View_Profile.Instance);
-                tab_View_Profile.Instance.Dock = DockStyle.Fill;
-                tab_View_Profile.Instance.BringToFront();
-            }
-            else
-                tab_View_Profile.Instance.BringToFront();
+            ShowTab(new tab_View_Profile());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var Instance = new tab_MY_Projects("My");
-            panel7.Controls.Add(Instance);
-            Instance.Dock = DockStyle.Fill;
-            Instance.BringToFront();
+            ShowTab(new tab_MY_Projects(this, tab_MY_Projects.ProjectType.Working));
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (!panel7.Controls.Contains(tab_Add_Project.Instance))
-            {
-                panel7.Controls.Add(tab_Add_Project.Instance);
-                tab_Add_Project.Instance.Dock = DockStyle.Fill;
-                tab_Add_Project.Instance.BringToFront();
-            }
-            else
-                tab_Add_Project.Instance.BringToFront();
+            ShowTab(new tab_Add_Project());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public void ShowTab(Control Tab)
+        {
+            panel7.Controls.Add(Tab);
+            Tab.Dock = DockStyle.Fill;
+            Tab.BringToFront();
+        }
+
+        private void textbox1_click(object sender, EventArgs e)
+        {
+            ShowTab(new tab_MY_Projects(this, tab_MY_Projects.ProjectType.Others));
         }
     }
 }

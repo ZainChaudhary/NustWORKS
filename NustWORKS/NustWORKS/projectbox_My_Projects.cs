@@ -13,10 +13,12 @@ namespace NustWORKS
     public partial class projectbox_My_Projects : UserControl
     {
         public readonly ProjectInfo Project;
-        public projectbox_My_Projects(ProjectInfo project)
+        public readonly Dashboard Dashboard;
+        public projectbox_My_Projects(Dashboard dashboard, ProjectInfo project)
         {
-            InitializeComponent();
             Project = project;
+            Dashboard = dashboard;
+            InitializeComponent();
             lblTitle.Text = project.Name;
             int budget = project.Budget;
             lblPrice.Text = budget.ToString();
@@ -27,7 +29,15 @@ namespace NustWORKS
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                Server.FinishProject(Project.ProjectId);
+                ((Panel)Parent).Controls.Remove(this);
+            }
+            catch
+            {
+                MessageBox.Show("Unable to delete project!");
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

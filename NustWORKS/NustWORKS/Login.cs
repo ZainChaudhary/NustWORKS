@@ -377,7 +377,15 @@ namespace NustWORKS
         }
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            UserInfo user = Server.Login(login_cms.Text, login_pass.Text);
+            UserInfo user = null;
+            try
+            {
+                user = Server.Login(login_cms.Text, login_pass.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("CMD-Id or Password is incorrect!");
+            }
             if (user != null)
             {
                 this.Hide();
@@ -387,7 +395,7 @@ namespace NustWORKS
             }
             else
             {
-                MessageBox.Show("CMD-Id or Password is incorrect!");
+                MessageBox.Show("FATAL ERROR!");
             }
         }
     }

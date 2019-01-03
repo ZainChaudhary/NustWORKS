@@ -15,13 +15,25 @@ namespace NustWORKS
         public readonly UserInfo User;
         public tab_View_Others_Profile(UserInfo user)
         {
-            User = user;
+
+
             InitializeComponent();
+            User = user;
             cms.Text = user.CMS;
             mail.Text = user.Email;
             phone.Text = user.PhoneNo;
             fn.Text = user.FirstName;
             ln.Text = user.LastName;
+        }
+
+        private void cms_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

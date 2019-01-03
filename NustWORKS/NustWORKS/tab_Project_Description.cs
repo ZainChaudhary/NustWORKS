@@ -15,16 +15,16 @@ namespace NustWORKS
         public readonly ProjectInfo Project;
         public tab_Project_Description(ProjectInfo project)
         {
-            Project = project;
-            lblTitle.Text = project.Name;
-            int budget = project.Budget;
-            lblPrice.Text = budget.ToString("B");
-            lblMessage.Text = project.Details;
-            lbltime.Text = project.Duration;
             
             
 
             InitializeComponent();
+            Project = project;
+            lblTitle.Text = project.Name;
+            int budget = project.Budget;
+            lblPrice.Text = budget.ToString();
+            lblMessage.Text = project.Details;
+            lbltime.Text = project.Duration;
         }
 
         private void tab_Project_Description_Load(object sender, EventArgs e)

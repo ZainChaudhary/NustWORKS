@@ -101,7 +101,7 @@ namespace NustWORKS
 
         public static UserInfo GetUser(string cms)
         {
-            var command = Command("SELECT * FROM user WHERE cms=@cms");
+            var command = Command("SELECT * FROM user WHERE cmsid=@cms");
             command.Parameters.AddWithValue("@cms", cms);
             object[] row = GetRow(command, "cmsid", "firstname", "lastname", "phone", "emailid");
             UserInfo user = new UserInfo();
@@ -254,7 +254,7 @@ namespace NustWORKS
 
         public static ProjectInfo[] GetAvailableProjects()
         {
-            object[][] rows = GetRows(Command("SELECT * FROM project WHERE NOT EXIST (SELECT * FROM workingprojects WHERE project.projectid = workingprojects.projectid)"), "projectid", "projectname", "clientid", "budget", "pduration", "pdetails");
+            object[][] rows = GetRows(Command("SELECT * FROM project WHERE NOT EXISTS (SELECT * FROM workingprojects WHERE project.projectid = workingprojects.projectid)"), "projectid", "projectname", "clientid", "budget", "pduration", "pdetails");
             return rows.Select((row) =>
             {
                 ProjectInfo proj = new ProjectInfo();
@@ -288,9 +288,9 @@ namespace NustWORKS
 
         public static ProjectInfo[] GetWorkingProjects()
         {
-            var command = Command("SELECT * FROM project,workingprojects WHERE project.projectid=workingprojects.projectid AND workingprojects.freelancerid = @cms");
+            var command = Command("SELECT project.projectid AS pid,project.projectname AS name,project.clientid AS client,project.budget AS budget,project.pduration AS duration,project.pdetails AS details FROM project,workingprojects WHERE project.projectid=workingprojects.projectid AND workingprojects.freelancerid = @cms");
             command.Parameters.AddWithValue("@cms", CurrentUser.CMS);
-            object[][] rows = GetRows(command, "project.projectid", "project.projectname", "project.clientid", "project.budget", "project.pduration", "project.pdetails");
+            object[][] rows = GetRows(command, "pid", "name", "client", "budget", "duration", "details");
             return rows.Select((row) =>
             {
                 ProjectInfo proj = new ProjectInfo();
@@ -304,7 +304,7 @@ namespace NustWORKS
             }).ToArray();
         }
 
-        public static void AcceptProject(int projectId, int client, string workingStatus, string payStatus)
+        public static void AcceptProject(int projectId, string client, string workingStatus, string payStatus)
         {
             var command = Command("INSERT INTO workingprojects VALUES (@pid,@client,@freelancer,@wstatus,@pstatus)");
             command.Parameters.AddWithValue("@pid", projectId);
@@ -318,10 +318,10 @@ namespace NustWORKS
         public static void FinishProject(int projectid)
         {
             var command1 = Command("DELETE FROM project WHERE projectid=@id");
-            var command2 = Command("DELETE FROM workingprojects projectid=@id");
             command1.Parameters.AddWithValue("@id", projectid);
-            command2.Parameters.AddWithValue("@id", projectid);
             Execute(command1);
+            var command2 = Command("DELETE FROM workingprojects projectid=@id");
+            command2.Parameters.AddWithValue("@id", projectid);
             Execute(command2);
         }
     }
