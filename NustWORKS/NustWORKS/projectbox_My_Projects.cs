@@ -34,7 +34,7 @@ namespace NustWORKS
                 Server.FinishProject(Project.ProjectId);
                 ((Panel)Parent).Controls.Remove(this);
             }
-            catch
+            catch (Exception ex)
             {
                 MessageBox.Show("Unable to delete project!");
             }

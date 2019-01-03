@@ -320,9 +320,6 @@ namespace NustWORKS
             var command1 = Command("DELETE FROM project WHERE projectid=@id");
             command1.Parameters.AddWithValue("@id", projectid);
             Execute(command1);
-            var command2 = Command("DELETE FROM workingprojects projectid=@id");
-            command2.Parameters.AddWithValue("@id", projectid);
-            Execute(command2);
         }
     }
 }
