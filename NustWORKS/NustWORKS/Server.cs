@@ -11,9 +11,9 @@ namespace NustWORKS
     {
         static Random random = new Random();
         const string Host = "localhost";
-        const string Port = "3306";
+        const string Port = "3307";
         const string Username = "root";
-        const string Password = "zdsalpha";
+        const string Password = "71722550";
         const string Dataset = "nustworks";
 
         public static UserInfo CurrentUser { get; private set; }

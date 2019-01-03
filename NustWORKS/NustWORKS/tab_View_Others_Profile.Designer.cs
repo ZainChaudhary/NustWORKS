@@ -122,7 +122,7 @@
             this.ln.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(202)))), ((int)(((byte)(254)))));
             this.ln.Location = new System.Drawing.Point(296, 175);
             this.ln.Name = "ln";
-            this.ln.Size = new System.Drawing.Size(144, 37);
+            this.ln.Size = new System.Drawing.Size(617, 37);
             this.ln.TabIndex = 18;
             this.ln.Text = "LastName";
             // 
@@ -134,7 +134,7 @@
             this.fn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(239)))));
             this.fn.Location = new System.Drawing.Point(295, 146);
             this.fn.Name = "fn";
-            this.fn.Size = new System.Drawing.Size(144, 37);
+            this.fn.Size = new System.Drawing.Size(618, 37);
             this.fn.TabIndex = 17;
             this.fn.Text = "FirstName";
             // 
